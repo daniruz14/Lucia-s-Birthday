@@ -12,32 +12,6 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<script>
-  function setLanguage(lang) {
-    // 1. Cambiar estado visual de los botones
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-
-    // 2. Buscar todos los elementos que tienen traducciones
-    const elements = document.querySelectorAll('[data-en][data-es]');
-
-    elements.forEach(el => {
-      const translation = el.getAttribute(`data-${lang}`);
-      if (translation) {
-        el.innerHTML = translation;
-      }
-    });
-
-    // Guardar preferencia del usuario en el navegador
-    localStorage.setItem('preferred_lang', lang);
-  }
-
-  // Cargar el idioma guardado si el usuario vuelve a entrar
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferred_lang') || 'en';
-    setLanguage(savedLang);
-  });
-</script>
   <main class="page-container">
     
     <!-- 1. WELCOME & INVITATION -->
@@ -270,6 +244,31 @@
     </section>
 
   </main>
+<script>
+  function setLanguage(lang) {
+    // 1. Cambiar estado visual de los botones
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
 
+    // 2. Buscar todos los elementos que tienen traducciones
+    const elements = document.querySelectorAll('[data-en][data-es]');
+
+    elements.forEach(el => {
+      const translation = el.getAttribute(`data-${lang}`);
+      if (translation) {
+        el.innerHTML = translation;
+      }
+    });
+
+    // Guardar preferencia del usuario en el navegador
+    localStorage.setItem('preferred_lang', lang);
+  }
+
+  // Cargar el idioma guardado si el usuario vuelve a entrar
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferred_lang') || 'en';
+    setLanguage(savedLang);
+  });
+</script>
 </body>
 </html>
