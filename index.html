@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucía's Wild One Birthday</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main class="page-container">
+    
+    <!-- 1. WELCOME & INVITATION -->
+    <section class="welcome-section">
+      <nav class="invitation-nav">
+        <span class="party-name">Lucía’s wild one</span>
+        <a href="#rsvp" class="rsvp-shortcut">RSVP &darr;</a>
+      </nav>
+
+      <div class="birthday-greeting">
+        <span class="overline">A LITTLE PARTY. A BIG MILESTONE.</span>
+        <h1 class="birthday-title">Our little wild one is turning <span>one!</span></h1>
+        <p class="welcome-msg">Join us for a sweet day of little adventures and lots of love for Lucía.</p>
+      </div>
+
+      <div class="invitation-card-wrapper">
+        <!-- Reemplaza invitacion.png con el nombre real de la foto de la tarjeta -->
+        <img src="Image/invitation.PNG" alt="Lucia's 1st Birthday Invitation" class="full-invitation-img">
+      </div>
+
+      <div class="invitation-actions">
+        <a href="#rsvp" class="btn btn-primary">
+          <span class="icon">♡</span> Celebrate with us · RSVP
+        </a>
+        <div class="quick-links">
+          <a href="#location">Find the farm &darr;</a>
+          <a href="#registry">Gift registry &darr;</a>
+        </div>
+      </div>
+
+      <div class="pastel-confetti">
+        <span class="dot dot-1"></span>
+        <span class="dot dot-2"></span>
+        <span class="dot dot-3"></span>
+        <span class="dot dot-4"></span>
+        <span class="dot dot-5"></span>
+      </div>
+    </section>
+
+    <!-- 2. EVENT DETAILS -->
+    <section class="event-details-section" id="location">
+      <div class="section-intro">
+        <h2>A day to remember</h2>
+        <p>All the little details for Lucía's 1st Birthday.</p>
+      </div>
+
+      <div class="party-details-card">
+        <div class="detail-item">
+          <div class="detail-symbol symbol-purple">📅</div>
+          <div class="detail-text">
+            <span class="category">THE DAY</span>
+            <span class="value">Saturday, January 9th</span>
+          </div>
+        </div>
+        <hr class="divider">
+
+        <div class="detail-item">
+          <div class="detail-symbol symbol-yellow">⏰</div>
+          <div class="detail-text">
+            <span class="category">THE TIME</span>
+            <span class="value">11AM–2PM</span>
+          </div>
+        </div>
+        <hr class="divider">
+
+        <div class="detail-item">
+          <div class="detail-symbol symbol-green">📍</div>
+          <div class="detail-text">
+            <span class="category">THE PLACE</span>
+            <span class="value">Green Meadows Petting Farm</span>
+            <span class="address">1881 Jack Calhoun Dr, Kissimmee, FL 34741</span>
+          </div>
+        </div>
+        <hr class="divider">
+
+        <div class="detail-item">
+          <div class="detail-symbol symbol-pink">👟</div>
+          <div class="detail-text">
+            <span class="category">DRESS CODE</span>
+            <span class="value">Closed-toe shoes recommended</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. RSVP FORM -->
+    <section class="rsvp-section" id="rsvp">
+      <div class="section-intro">
+        <h2>Will you join the fun?</h2>
+        <p>Let us know who's coming. We can't wait to celebrate this little wild one with you!</p>
+      </div>
+
+      <!-- Reemplaza TU_CODIGO_FORMSPREE cuando crees tu formulario en formspree.io -->
+      <form action="https://formspree.io/f/TU_CODIGO_FORMSPREE" method="POST" class="rsvp-form">
+        <div class="form-field">
+          <label for="name">Your name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email address *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-field">
+          <label>Will you be there? *</label>
+          <div class="attendance-choices">
+            <label class="attendance-option">
+              <input type="radio" name="attendance" value="Yes" checked>
+              <span class="choice-label">Yes, can't wait!</span>
+            </label>
+            <label class="attendance-option">
+              <input type="radio" name="attendance" value="No">
+              <span class="choice-label">Sorry, can't make it</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="guests">Number of guests *</label>
+          <select id="guests" name="guests" required>
+            <option value="1 guest">1 guest</option>
+            <option value="2 guests">2 guests</option>
+            <option value="3 guests">3 guests</option>
+            <option value="4+ guests">4+ guests</option>
+          </select>
+          <span class="guidance">Please include yourself and any little ones.</span>
+        </div>
+
+        <div class="form-field">
+          <label for="note">A little note (optional)</label>
+          <textarea id="note" name="note" placeholder="Leave a birthday wish or a note..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          <span>✈</span> Send RSVP
+        </button>
+        <span class="availability">Please confirm by January 2nd, 2027.</span>
+      </form>
+    </section>
+
+    <!-- 4. FARM LOCATION -->
+
+    <section class="farm-section" id="location">
+      <div class="section-intro">
+        <h2>Meet us at the farm</h2>
+        <p>A little adventure awaits in Kissimmee.</p>
+      </div>
+
+      <!-- MAPA INTERACTIVO DE GOOGLE MAPS -->
+      <div class="illustrated-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.2285145781355!2d-81.42416192383842!3d28.230722702187682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd82ccb6bd46bd%3A0xe5c490e5ec8c49e1!2sGreen%20Meadows%20Petting%20Farm!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+          width="100%" 
+          height="204" 
+          style="border:0; border-radius: 20px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="venue-address-block">
+        <h3 class="venue-title">Green Meadows Petting Farm</h3>
+        <p class="venue-sub">1881 Jack Calhoun Dr, Kissimmee, FL 34741</p>
+      </div>
+
+      <!-- BOTÓN PARA ABRIR GOOGLE MAPS -->
+      <a href="https://maps.app.goo.gl/P6MSw4KaqEv9YjkJ7" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        📍 View location in maps
+      </a>
+    </section>
+
+    <!-- 5. GIFT REGISTRY & FAREWELL -->
+    <section class="registry-farewell-section" id="registry">
+      <div class="gift-registry-card">
+        <div class="gift-symbol">🎁</div>
+        <h3 class="gift-heading">Your presence is the gift</h3>
+        <p class="gift-msg">Celebrating with you means the most. If you'd like to bring a little something, Lucía's wish list will be here.</p>
+        <a href="https://www.amazon.com/registries/gl/guest-view/2HB9WQ2HIJ5OE?ref_=cm_sw_r_apin_ggr-subnav-share_52SD8DFSSAM2NA7XDQME_2&language=en-US" target="_blank" class="btn btn-primary">
+          🎁 Amazon Gift Registry
+        </a>
+      </div>
+
+      <div class="warm-closing">
+        <div class="pastel-confetti">
+          <span class="dot dot-1"></span>
+          <span class="dot dot-2"></span>
+          <span class="dot dot-3"></span>
+          <span class="dot dot-4"></span>
+          <span class="dot dot-5"></span>
+        </div>
+        <h2 class="farewell-title">Little hands. Big hugs.<br>So much love.</h2>
+        <p class="closing-msg">We can't wait to make sweet memories with you on Lucía's special day.</p>
+        <p class="signature">With love, Lucía’s family ♡</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

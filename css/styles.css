@@ -1,0 +1,443 @@
+/* Reset general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FAF6EF;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #75766E;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 390px; /* Tamaño idéntico al marco de Figma */
+  background: #FAF6EF;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. WELCOME SECTION */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 24px 32px;
+  gap: 24px;
+}
+
+.invitation-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.party-name {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: #465747;
+}
+
+.rsvp-shortcut {
+  background: #E8EDE2;
+  color: #465747;
+  padding: 8px 17px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.birthday-greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.overline {
+  font-weight: 800;
+  font-size: 11px;
+  color: #718A70;
+  letter-spacing: 0.5px;
+}
+
+.birthday-title {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  line-height: 1.12;
+  color: #465747;
+  font-weight: 400;
+}
+
+.birthday-title span {
+  color: #A992C8;
+}
+
+.welcome-msg {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #75766E;
+}
+
+.invitation-card-wrapper {
+  width: 100%;
+  box-shadow: 0px 8px 24px rgba(93, 87, 64, 0.09);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.full-invitation-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.invitation-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.quick-links {
+  display: flex;
+  gap: 24px;
+}
+
+.quick-links a {
+  color: #718A70;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* Confetti Dots */
+.pastel-confetti {
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.dot-1 { background: #F3D5D4; }
+.dot-2 { background: #F7E8B9; }
+.dot-3 { background: #E8EDE2; }
+.dot-4 { background: #EDE6F1; }
+.dot-5 { background: #DDEAF0; }
+
+/* 2. EVENT DETAILS SECTION */
+.event-details-section {
+  padding: 12px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-intro h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: #465747;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.party-details-card {
+  background: #FFFDFA;
+  border: 1px solid #E4E2D7;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.detail-symbol {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.symbol-purple { background: #EDE6F1; }
+.symbol-yellow { background: #F7E8B9; }
+.symbol-green { background: #E8EDE2; }
+.symbol-pink { background: #F3D5D4; }
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.category {
+  font-size: 10px;
+  font-weight: 800;
+  color: #75766E;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #465747;
+}
+
+.address {
+  font-size: 13px;
+  color: #75766E;
+  margin-top: 2px;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: #E4E2D7;
+}
+
+/* 3. RSVP FORM SECTION */
+.rsvp-section {
+  background: #E8EDE2;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #465747;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 14px;
+  background: #FFFDFA;
+  border: 1px solid #E4E2D7;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #465747;
+}
+
+.form-field textarea {
+  height: 92px;
+  resize: vertical;
+}
+
+.attendance-choices {
+  display: flex;
+  gap: 10px;
+}
+
+.attendance-option {
+  flex: 1;
+  background: #FFFDFA;
+  border: 1px solid #E4E2D7;
+  border-radius: 12px;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: #465747;
+}
+
+.guidance, .availability {
+  font-size: 11px;
+  color: #75766E;
+  text-align: center;
+}
+
+/* 4. FARM LOCATION SECTION */
+.farm-section {
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.illustrated-map {
+  position: relative;
+  width: 100%;
+  height: 204px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+}
+
+.map-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.venue-marker {
+  position: relative;
+  z-index: 1;
+  background: #FFFDFA;
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #465747;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.map-caption {
+  font-size: 11px;
+  text-align: center;
+  color: #75766E;
+}
+
+.venue-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #465747;
+}
+
+.venue-sub {
+  font-size: 14px;
+  color: #75766E;
+}
+
+/* 5. GIFT REGISTRY & FAREWELL */
+.registry-farewell-section {
+  padding: 0 24px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
+
+.gift-registry-card {
+  background: #EDE6F1;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.gift-symbol {
+  width: 44px;
+  height: 44px;
+  background: #FFFDFA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.gift-heading {
+  font-family: 'Fraunces', serif;
+  font-size: 25px;
+  color: #465747;
+  font-weight: 400;
+}
+
+.warm-closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.farewell-title {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: #465747;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.signature {
+  font-weight: 700;
+  font-size: 14px;
+  color: #718A70;
+}
+
+/* BOTONES GENERALES */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: #718A70;
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  background: #FFFDFA;
+  border: 1px solid #E4E2D7;
+  color: #465747;
+}
