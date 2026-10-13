@@ -12,20 +12,78 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<script>
+  function setLanguage(lang) {
+    // 1. Cambiar estado visual de los botones
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
 
+    // 2. Buscar todos los elementos que tienen traducciones
+    const elements = document.querySelectorAll('[data-en][data-es]');
+
+    elements.forEach(el => {
+      const translation = el.getAttribute(`data-${lang}`);
+      if (translation) {
+        el.innerHTML = translation;
+      }
+    });
+
+    // Guardar preferencia del usuario en el navegador
+    localStorage.setItem('preferred_lang', lang);
+  }
+
+  // Cargar el idioma guardado si el usuario vuelve a entrar
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferred_lang') || 'en';
+    setLanguage(savedLang);
+  });
+</script>
   <main class="page-container">
     
     <!-- 1. WELCOME & INVITATION -->
     <section class="welcome-section">
       <nav class="invitation-nav">
         <span class="party-name">Lucía’s wild one</span>
+        <div class="lang-switch">
+          <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+          <span class="lang-divider">|</span>
+          <button id="btn-es" class="lang-btn" onclick="setLanguage('es')">ES</button>
+        </div>
         <a href="#rsvp" class="rsvp-shortcut">RSVP &darr;</a>
       </nav>
 
+     <!-- BARRA DE NAVEGACIÓN Y SELECTOR DE IDIOMA -->
+      <nav class="invitation-nav">
+        <span class="party-name">Lucía’s wild one</span>
+
+        <div class="lang-switch">
+          <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+          <span class="lang-divider">|</span>
+          <button id="btn-es" class="lang-btn" onclick="setLanguage('es')">ES</button>
+        </div>
+
+        <a href="#rsvp" class="rsvp-shortcut" data-en="RSVP ↓" data-es="Confirmar ↓">RSVP ↓</a>
+      </nav>
+
+      <!-- SALUDO DE BIENVENIDA -->
       <div class="birthday-greeting">
-        <span class="overline">CELEBRA ESTE DIA TAN ESPECIAL CON NOSOTROS/ CELEBRATE THIS SPECIAL DAY WITH US</span>
-        <h1 class="birthday-title">Our little wild one is turning <span>one!</span></h1>
-        <p class="welcome-msg">Join us for a sweet day of little adventures and lots of love for Lucía.</p>
+        <span class="overline" 
+              data-en="CELEBRATE THIS SPECIAL DAY WITH US" 
+              data-es="CELEBRA ESTE DÍA TAN ESPECIAL CON NOSOTROS">
+          CELEBRATE THIS SPECIAL DAY WITH US
+        </span>
+
+        <h1 class="birthday-title" 
+            data-en="Our little wild one is turning <span>one!</span>" 
+            data-es="¡Nuestra pequeñita cumple <span>un año!</span>">
+          Our little wild one is turning <span>one!</span>
+        </h1>
+
+        <p class="welcome-msg" 
+           data-en="Join us for a sweet day of little adventures and lots of love for Lucía." 
+           data-es="Acompáñanos a un dulce día de pequeñas aventuras y mucho amor para Lucía.">
+          Join us for a sweet day of little adventures and lots of love for Lucía.
+        </p>
       </div>
 
       <div class="invitation-card-wrapper">
